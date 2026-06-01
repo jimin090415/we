@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-리그 통합 데이터 허브</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo-area">
+                <i class="fa-solid fa-volleyball logo-icon"></i>
+                <h2>V-LEAGUE HUB</h2>
+            </div>
+            
+            <div class="league-selector">
+                <button class="league-btn active" data-league="women">여자부</button>
+                <button class="league-btn" data-league="men">남자부</button>
+            </div>
+
+            <nav class="team-nav">
+                </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-team-info">
+                    <img id="header-logo" src="" alt="팀 로고" class="header-logo">
+                    <div>
+                        <h1 id="header-team-name">팀 선택 필요</h1>
+                        <p id="header-team-sub">V-League Professional Volleyball Team</p>
+                    </div>
+                </div>
+                <div class="header-meta">
+                    <span class="season-badge">2023-2024 SEASON</span>
+                </div>
+            </header>
+
+            <section class="info-grid">
+                <div class="info-card overview-card">
+                    <h3><i class="fa-solid fa-circle-info"></i> 구단 개요</h3>
+                    <table class="info-table">
+                        <tr><th>연고지</th><td id="info-location">-</td></tr>
+                        <tr><th>홈구장</th><td id="info-stadium">-</td></tr>
+                        <tr><th>감독</th><td id="info-coach">-</td></tr>
+                        <tr><th>창단일</th><td id="info-founded">-</td></tr>
+                    </table>
+                </div>
+
+                <div class="info-card honor-card">
+                    <h3><i class="fa-solid fa-trophy"></i> 구단 히스토리</h3>
+                    <div class="history-content">
+                        <div class="history-item">
+                            <span class="history-label">우승 횟수</span>
+                            <span id="info-champs" class="history-value">-</span>
+                        </div>
+                        <div class="history-item">
+                            <span class="history-label">직전 시즌 순위</span>
+                            <span id="info-last-rank" class="history-value">-</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="squad-section">
+                <div class="section-header">
+                    <h3><i class="fa-solid fa-users"></i> 등록 선수단 명단</h3>
+                    <div class="position-filter">
+                        <button class="filter-btn active" data-pos="all">전체</button>
+                        <button class="filter-btn" data-pos="OH">아웃사이드 히터</button>
+                        <button class="filter-btn" data-pos="OP">아포짓</button>
+                        <button class="filter-btn" data-pos="MB">미들 블로커</button>
+                        <button class="filter-btn" data-pos="S">세터</button>
+                        <button class="filter-btn" data-pos="L">리베로</button>
+                    </div>
+                </div>
+
+                <div class="player-grid" id="player-grid-area">
+                    </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
